@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>آلة حاسبة</title>
+</head>
+<body>
+    <h2>آلة حاسبة بسيطة</h2>
+    <form method="post">
+        <input type="text" name="num1" placeholder="الرقم الأول" required>
+        <input type="text" name="num2" placeholder="الرقم الثاني" required>
+        <select name="operation">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">×</option>
+            <option value="divide">÷</option>
+        </select>
+        <button type="submit">احسب</button>
+    </form>
+    {% if result is not none %}
+        <h3>النتيجة: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
